@@ -1,17 +1,17 @@
 
-  ![ilstr01-logo](https://github.com/john-json/Ilstr01-sbar/blob/main/sketchybar/Images/ilstr01_logo.png?raw=true)
+  ![ilstr01-logo](https://github.com/john-json/Ilstr01-sketchybar/blob/main/Images/ilstr01_logo.png?raw=true)
 
 
 ## Ilstr01-sketchybar
 
 ## Full and tiled, dark and light mode for sketchybar 🦀 
-  ![ilstr01-logo](https://github.com/john-json/Ilstr01-sbar/blob/main/sketchybar/Images/Showcase.png?raw=true)
+  ![ilstr01-logo](https://github.com/john-json/Ilstr01-sketchybar/blob/main/Images/Showcase.png?raw=true)
 
 ## Light version
-  ![ilstr01-logo](https://github.com/john-json/Ilstr01-sbar/blob/main/sketchybar/Images/white.png?raw=true)
+  ![ilstr01-logo](https://github.com/john-json/Ilstr01-sketchybar/blob/main/Images/white.png?raw=true)
 
 ## Light full
-   ![ilstr01-logo](https://github.com/john-json/Ilstr01-sbar/blob/main/sketchybar/Images/light-full.png?raw=true) 
+   ![ilstr01-logo](https://github.com/john-json/Ilstr01-sketchybar/blob/main/Images/light-full.png?raw=true) 
 
 ## Installing
 
