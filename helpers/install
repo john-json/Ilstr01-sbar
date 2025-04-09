@@ -1,0 +1,55 @@
+#--------------------------------------------------
+#.                # Packages
+#--------------------------------------------------
+brew install lua
+brew install switchaudio-osx
+brew install nowplaying-cli
+
+brew tap FelixKratz/formulae
+brew install sketchybar
+
+#--------------------------------------------------
+#.                # Fonts
+#--------------------------------------------------
+
+brew install --cask sf-symbols
+brew install --cask homebrew/cask-fonts/font-sf-mono
+brew install --cask homebrew/cask-fonts/font-sf-pro
+brew install --cask font-hack-nerd-font
+
+#--------------------------------------------------
+#.                #!/bin/bash
+#--------------------------------------------------
+mkdir -p ~/.config/sketchybar/bak # Ensure backup directory exists
+
+#--------------------------------------------------
+#.                #sbar config & color reload fix
+#--------------------------------------------------
+
+chmod +x ~/.config/sketchybar/set-bar-mode.sh
+chmod +x ~/.config/sketchybar/items/scripts/dark-mode.sh
+
+echo -n 'export alias sketchybar="$HOME/.config/sketchybar/set-bar-mode.sh"' >>~/.zshrc
+
+git clone https://github.com/bouk/dark-mode-notify.git ~/.config/sketchybar/helpers/
+
+cd ~/.config/sketchybar/helpers/dark-mode-notify
+
+echo "Musst be installed as sudo to work properly"
+sudo make install
+
+launchctl load -w ~/Library/LaunchAgents/ke.bou.dark-mode-notify.plist
+
+# Reload zshrc to apply changes
+source ~/.zshrc
+
+log stream --predicate 'subsystem == "com.apple.UIKit"'
+
+#--------------------------------------------------
+#.                App font & Reload
+#--------------------------------------------------
+
+curl -L https://github.com/kvndrsslr/sketchybar-app-font/releases/download/v2.0.5/sketchybar-app-font.ttf -o $HOME/Library/Fonts/sketchybar-app-font.ttf
+
+# SbarLua
+(git clone https://github.com/FelixKratz/SbarLua.git /tmp/SbarLua && cd /tmp/SbarLua/ && make install && rm -rf /tmp/SbarLua/)
