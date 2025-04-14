@@ -27,7 +27,7 @@ Then the Lua Api:
 https://github.com/FelixKratz/SbarLua
 
 ```sh
-(git clone https://github.com/FelixKratz/SbarLua.git /tmp/SbarLua && cd /tmp/SbarLua/ && make install && rm -rf /tmp/SbarLua/)
+git clone https://github.com/FelixKratz/SbarLua.git /tmp/SbarLua && cd /tmp/SbarLua/ && make install && rm -rf /tmp/SbarLua/
 ```
 
 For LUA to actually find the module, it has to reside in a path included in the lua cpath (TODO: Install module into the default lua cpath), e.g.:
@@ -35,9 +35,9 @@ For LUA to actually find the module, it has to reside in a path included in the 
 package.cpath = package.cpath .. ";/Users/" .. os.getenv("USER") .. "/.local/share/sketchybar_lua/?.so"
 ```
 
-Then clone the repository:
+Install the config:
 ```sh
-git clone https://github.com/john-json/Ilstr01-sbar.git ~/.config/
+curl -L https://raw.githubusercontent.com/john-json/Ilstr01-sketchybar/master/install_sketchybar.sh | sh
 ```
 
 
