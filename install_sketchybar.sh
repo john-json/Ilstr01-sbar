@@ -22,4 +22,7 @@ git clone https://github.com/john-json/dotfiles.git /tmp/dotfiles
 mv $HOME/.config/sketchybar $HOME/.config/sketchybar_backup
 mv /tmp/dotfiles/.config/sketchybar $HOME/.config/sketchybar
 rm -rf /tmp/dotfiles
+
+echo 'eval "$(alias sketchybar="$HOME/.config/sketchybar/set-bar-mode.sh")"' >> ~/.zshrc
+
 brew services restart sketchybar
